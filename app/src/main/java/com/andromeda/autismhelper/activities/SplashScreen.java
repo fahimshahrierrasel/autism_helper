@@ -1,4 +1,4 @@
-package com.andromeda.autismhelper;
+package com.andromeda.autismhelper.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,33 +8,31 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.andromeda.autismhelper.R;
 
 public class SplashScreen extends AppCompatActivity {
-    private TextView tv;
-    private TextView tvms;
-    private ImageView iv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
 
-        tv = (TextView) findViewById(R.id.tv);
-        tvms = (TextView) findViewById(R.id.tvms);
-        iv = (ImageView) findViewById(R.id.iv);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        Animation myanim = AnimationUtils.loadAnimation(this,R.anim.mytransation);
-        tv.startAnimation(myanim);
-        tvms.startAnimation(myanim);
-        iv.startAnimation(myanim);
+        TextView textViewAppName = findViewById(R.id.textView_app_name);
+        TextView textViewAppMessage = findViewById(R.id.textView_app_message);
+        ImageView imageViewLogo = findViewById(R.id.imageView_logo);
+
+        Animation loadAnimation = AnimationUtils.loadAnimation(this,R.anim.alpha_transation);
+        textViewAppName.startAnimation(loadAnimation);
+        textViewAppMessage.startAnimation(loadAnimation);
+        imageViewLogo.startAnimation(loadAnimation);
 
         Thread timer = new Thread(){
             public void run(){
                 try{
-                    sleep(6000);
-                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(intent);
+                    sleep(1500);
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
                     finish();
                 }catch (InterruptedException e){
                     e.printStackTrace();
