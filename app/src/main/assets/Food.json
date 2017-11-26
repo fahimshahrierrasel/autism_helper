@@ -1,0 +1,29 @@
+{
+  "categoryname": "Food",
+  "items": [
+    {
+      "itemname": "beef curry",
+      "url": "http://l.pix.sr/2017/11/26/IBqBE.jpg"
+    },
+    {
+      "itemname": "beef curry with rice",
+      "url": "http://l.pix.sr/2017/11/26/IBwVV.jpg"
+    },
+    {
+      "itemname": "chicken curry",
+      "url": "http://l.pix.sr/2017/11/26/IBHy2.jpg"
+    },
+    {
+      "itemname": "fish curry",
+      "url": "http://l.pix.sr/2017/11/26/IBRvZ.jpg"
+    },
+    {
+      "itemname": "rice",
+      "url": "http://l.pix.sr/2017/11/26/IBOdn.jpg"
+    },
+    {
+      "itemname": "vegetable curry",
+      "url": "http://l.pix.sr/2017/11/26/IBh6U.jpg"
+    }
+  ]
+}

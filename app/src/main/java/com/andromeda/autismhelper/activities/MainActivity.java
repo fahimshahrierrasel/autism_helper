@@ -99,6 +99,9 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             public void onItemClick(@NotNull View itemView, int position) {
                 String text = allFeatures.get(position).getFeatureName();
                 speak(englishToBengali(text));
+                Intent detector = new Intent(MainActivity.this, CategoryItems.class);
+                detector.putExtra("JSON_FILE", "Food.json");
+                startActivity(detector);
             }
         });
     }
