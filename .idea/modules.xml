@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\fahim\AndroidStudioProjects\autism_helper\app\app.iml" filepath="C:\Users\fahim\AndroidStudioProjects\autism_helper\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/autism_helper.iml" filepath="$PROJECT_DIR$/autism_helper.iml" />
+      <module fileurl="file://C:\Users\fahim\AndroidStudioProjects\autism_helper\autism_helper.iml" filepath="C:\Users\fahim\AndroidStudioProjects\autism_helper\autism_helper.iml" />
     </modules>
   </component>
 </project>

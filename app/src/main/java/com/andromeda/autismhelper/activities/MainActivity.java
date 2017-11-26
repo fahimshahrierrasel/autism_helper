@@ -102,8 +102,11 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
     @Override
     public void onInit(int i) {
-        if(i == TextToSpeech.SUCCESS)
+        if(i == TextToSpeech.SUCCESS) {
             ttsEngine.setLanguage(new Locale("bn", "BD"));
+            ttsEngine.setSpeechRate(0.5f);
+        }
+
     }
 
     @Override
