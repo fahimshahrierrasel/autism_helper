@@ -10,8 +10,6 @@ public class Feature {
     @Nullable
     private String featureName;
     private int featureImage;
-    @Nullable
-    private Class activityClass;
 
     @Nullable
     public final String getFeatureName() {
@@ -30,18 +28,8 @@ public class Feature {
         this.featureImage = var1;
     }
 
-    @Nullable
-    public final Class getActivityClass() {
-        return this.activityClass;
-    }
-
-    public final void setActivityClass(@Nullable Class var1) {
-        this.activityClass = var1;
-    }
-
-    public Feature(@Nullable String featureName, int featureImage, @Nullable Class activityClass) {
+    public Feature(@Nullable String featureName, int featureImage) {
         this.featureName = featureName;
         this.featureImage = featureImage;
-        this.activityClass = activityClass;
     }
 }

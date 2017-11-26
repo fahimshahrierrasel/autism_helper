@@ -3,4 +3,8 @@
     <string name="app_name">Autism Helper</string>
     <string name="title_activity_main">@string/app_name</string>
     <string name="app_message">Multilingual Support</string>
+
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
 </resources>
