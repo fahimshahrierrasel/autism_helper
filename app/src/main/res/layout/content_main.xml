@@ -8,12 +8,32 @@
     tools:context="com.andromeda.autismhelper.activities.MainActivity"
     tools:showIn="@layout/activity_main">
 
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:padding="10dp"
+        android:id="@+id/detection"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/classifier"
+        android:src="@drawable/search"/>
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:padding="10dp"
+        android:id="@+id/classifier"
+        app:layout_constraintLeft_toRightOf="@id/detection"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/observation"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/featureRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="10dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detection"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

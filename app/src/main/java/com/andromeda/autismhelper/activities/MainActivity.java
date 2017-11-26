@@ -1,5 +1,6 @@
 package com.andromeda.autismhelper.activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,10 +10,12 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
 import com.andromeda.autismhelper.R;
 import com.andromeda.autismhelper.adapters.FeaturesAdapter;
+import com.andromeda.autismhelper.image_recognition.ClassifierActivity;
+import com.andromeda.autismhelper.image_recognition.DetectorActivity;
 import com.andromeda.autismhelper.models.Feature;
 
 import org.jetbrains.annotations.NotNull;
@@ -47,22 +50,41 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         toolbar = findViewById(R.id.toolbar);
         recyclerViewFeatures = findViewById(R.id.featureRecyclerView);
         staggeredGridLayoutManager = new StaggeredGridLayoutManager(3, 1);
+
+        ImageButton imageButtonClassifier = findViewById(R.id.classifier);
+        ImageButton imageButtonDetection = findViewById(R.id.detection);
+
+        imageButtonClassifier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent classifier = new Intent(MainActivity.this, ClassifierActivity.class);
+                startActivity(classifier);
+            }
+        });
+
+        imageButtonDetection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent detector = new Intent(MainActivity.this, DetectorActivity.class);
+                startActivity(detector);
+            }
+        });
         
         
         setSupportActionBar(toolbar);
         
 
         // Add Components for Feature RecyclerView
-        allFeatures.add(new Feature("Food", R.drawable.fastfood, null));
-        allFeatures.add(new Feature("Drink", R.drawable.beer, null));
-        allFeatures.add(new Feature("Dress", R.drawable.shirt, null));
-        allFeatures.add(new Feature("Alphabet", R.drawable.alphabet, null));
-        allFeatures.add(new Feature("Chocolate", R.drawable.chocolate, null));
-        allFeatures.add(new Feature("Dairy", R.drawable.dairy, null));
-        allFeatures.add(new Feature("Puzzle", R.drawable.puzzle, null));
-        allFeatures.add(new Feature("Pantone", R.drawable.pantone, null));
-        allFeatures.add(new Feature("Water", R.drawable.water, null));
-        allFeatures.add(new Feature("Settings", R.drawable.settings, null));
+        allFeatures.add(new Feature("Food", R.drawable.fastfood));
+        allFeatures.add(new Feature("Drink", R.drawable.beer));
+        allFeatures.add(new Feature("Dress", R.drawable.shirt));
+        allFeatures.add(new Feature("Alphabet", R.drawable.alphabet));
+        allFeatures.add(new Feature("Chocolate", R.drawable.chocolate));
+        allFeatures.add(new Feature("Dairy", R.drawable.dairy));
+        allFeatures.add(new Feature("Puzzle", R.drawable.puzzle));
+        allFeatures.add(new Feature("Pantone", R.drawable.pantone));
+        allFeatures.add(new Feature("Water", R.drawable.water));
+        allFeatures.add(new Feature("Settings", R.drawable.settings));
 
         // Set up Feature RecyclerView
         FeaturesAdapter featuresAdapter = new FeaturesAdapter(this, allFeatures);
@@ -75,7 +97,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         featuresAdapter.setOnItemClickListener(new FeaturesAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(@NotNull View itemView, int position) {
-                speak(englishToBengali(allFeatures.get(position).getFeatureName()));
+                String text = allFeatures.get(position).getFeatureName();
+                speak(englishToBengali(text));
             }
         });
     }
