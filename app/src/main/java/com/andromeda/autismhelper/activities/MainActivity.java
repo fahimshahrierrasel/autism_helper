@@ -72,19 +72,33 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         
         
         setSupportActionBar(toolbar);
-        
+
 
         // Add Components for Feature RecyclerView
-        allFeatures.add(new Feature("Food", R.drawable.fastfood));
-        allFeatures.add(new Feature("Drink", R.drawable.beer));
-        allFeatures.add(new Feature("Dress", R.drawable.shirt));
-        allFeatures.add(new Feature("Alphabet", R.drawable.alphabet));
-        allFeatures.add(new Feature("Chocolate", R.drawable.chocolate));
-        allFeatures.add(new Feature("Dairy", R.drawable.dairy));
-        allFeatures.add(new Feature("Puzzle", R.drawable.puzzle));
-        allFeatures.add(new Feature("Pantone", R.drawable.pantone));
-        allFeatures.add(new Feature("Water", R.drawable.water));
-        allFeatures.add(new Feature("Settings", R.drawable.settings));
+        String string_alphabet = getResources().getString(R.string.Alphabet);
+        allFeatures.add(new Feature(string_alphabet, R.drawable.alphabet));
+        String string_chocolate = getResources().getString(R.string.Chocolate);
+        allFeatures.add(new Feature(string_chocolate, R.drawable.chocolate));
+        String string_color = getResources().getString(R.string.Color);
+        allFeatures.add(new Feature(string_color, R.drawable.pantone));
+        String string_food = getResources().getString(R.string.Food);
+        allFeatures.add(new Feature(string_food, R.drawable.doughnut));
+        String string_drink = getResources().getString(R.string.Drink);
+        allFeatures.add(new Feature(string_drink, R.drawable.water));
+        String string_dress = getResources().getString(R.string.Dress);
+        allFeatures.add(new Feature(string_dress, R.drawable.shirt));
+        String string_emotion = getResources().getString(R.string.Emotion);
+        allFeatures.add(new Feature(string_emotion, R.drawable.love));
+        String string_fastfood = getResources().getString(R.string.FastFood);
+        allFeatures.add(new Feature(string_fastfood, R.drawable.stand));
+        String string_puzzle = getResources().getString(R.string.Puzzle);
+        allFeatures.add(new Feature(string_puzzle, R.drawable.puzzle));
+        String string_shape = getResources().getString(R.string.Shape);
+        allFeatures.add(new Feature(string_shape, R.drawable.share));
+        String string_toy = getResources().getString(R.string.Toy);
+        allFeatures.add(new Feature(string_toy, R.drawable.teddybear));
+        String string_water = getResources().getString(R.string.Water);
+        allFeatures.add(new Feature(string_water, R.drawable.water));
 
         // Set up Feature RecyclerView
         FeaturesAdapter featuresAdapter = new FeaturesAdapter(this, allFeatures);
