@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">অটিজম সাহায্যকারী</string>
+    <string name="title_activity_main">@string/app_name</string>
+    <string name="app_message">বহুভাষী সমর্থন</string>
+    <string name="Alphabet">বর্ণমালা</string>
+    <string name="Chocolate">চকলেট</string>
+    <string name="Color">রঙ</string>
+    <string name="Drink">পান করা</string>
+    <string name="Dress">পোশাক</string>
+    <string name="Emotion">আবেগ</string>
+    <string name="Food">খাবার</string>
+    <string name="FastFood">ফাস্টফুড</string>
+    <string name="Puzzle">ধাঁধা</string>
+    <string name="Shape">আকৃতি</string>
+    <string name="Toy">খেলনা</string>
+    <string name="Water">পানি</string>
+</resources>

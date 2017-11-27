@@ -3,8 +3,21 @@
     <string name="app_name">Autism Helper</string>
     <string name="title_activity_main">@string/app_name</string>
     <string name="app_message">Multilingual Support</string>
+    <string name="Alphabet">Alphabet</string>
+    <string name="Chocolate">Chocolate</string>
+    <string name="Color">Color</string>
+    <string name="Drink">Drink</string>
+    <string name="Dress">Dress</string>
+    <string name="Emotion">Emotion</string>
+    <string name="Food">Food</string>
+    <string name="FastFood">FastFood</string>
+    <string name="Puzzle">Puzzle</string>
+    <string name="Shape">Shape</string>
+    <string name="Toy">Toy</string>
+    <string name="Water">Water</string>
 
     <string name="description_info">Info</string>
     <string name="request_permission">This sample needs camera permission.</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="title_activity_category_items">Category Items</string>
 </resources>
